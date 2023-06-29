@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu ul li {
+            float: left;
+            width: 300px;
+            list-style-type: none;
+            background-color: rgb(223, 112, 52);
+            color: white;
+            line-height: 30px;
+        }
+
+        .menu ul li:hover {
+            color: black;
+            background-color: rgb(186, 138, 138);
+        }
+
+        .menu ul li ul {
+            display: none;
+        }
+
+        .menu ul li:hover>ul {
+            display: block;
+        }
+
+        .menu ul li ul li {
+            display: inline;
+            position: relative;
+        }
+
+        .menu ul li ul li ul {
+            position: absolute;
+            left: 300px;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li>sony
+                <ul>
+                    <li>computer</li>
+                    <li>Bluthouth</li>
+                    <li>laptop
+                        <ul>
+                            <li>32 inch</li>
+                            <li>32 inch</li>
+                            <li>43 inch
+                                <ul>
+                                    <li>0.32</li>
+                                    <li>0.43</li>
+                                    <li>0.21</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Apple
+                <ul>
+                    <li>technological</li>
+                    <li>Ipead</li>
+                    <li>datacables
+                        <ul>
+                            <li>12 inch</li>
+                            <li>45 inch</li>
+                            <li>75 inch
+                                <ul>
+                                    <li>watching</li>
+                                    <li>sugar</li>
+                                    <li>television</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>samsung
+                <ul>
+                    <li>macabook</li>
+                    <li>phone</li>
+                    <li>charger
+                        <ul>
+                            <li>34 inch</li>
+                            <li>23 inch</li>
+                            <li>55 inch</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

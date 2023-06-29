@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu ul li {
+            float: left;
+            list-style-type: none;
+            width: 300px;
+            line-height: 30px;
+            background-color: rgb(233, 136, 88);
+            color: white;
+        }
+
+        .menu ul li:hover {
+            color: black;
+            background-color: rgb(179, 138, 138);
+        }
+
+        .menu ul li ul {
+            display: none;
+        }
+
+        .menu ul li:hover>ul {
+            display: block;
+        }
+
+        .menu ul li ul li {
+            display: inline;
+            position: relative;
+        }
+
+        .menu ul li ul li ul {
+            position: absolute;
+            left: 300px;
+            top: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li>sony
+                <ul>
+                    <li>television</li>
+                    <li>mobile</li>
+                    <li>application</li>
+                </ul>
+            </li>
+            <li>samsung
+                <ul>
+                    <li>mobile</li>
+                    <li>speaker</li>
+                    <li>datacables
+                        <ul>
+                            <li>23 inch</li>
+                            <li>32 inch</li>
+                            <li>43 inch</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li>apple
+                <ul>
+                    <li>ipad</li>
+                    <li>mobile</li>
+                    <li>mackbook</li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <body>
+   <h1 title="heading title">this is a basic heading</h1>
+   
+   <p>this is a basic heading:</p>
+
+   <a href="https://www.google.com"target="_blank"title="Go to Google Search">
+    GO to Google</a>
+
+    </body>
+</html>

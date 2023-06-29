@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        div{
+            height: 50px;
+            width: 150px;
+            border: 2px solid black;
+            display: inline-block;
+        }
+        #container{
+            height: 400px;
+            width: 600px;
+            display: flex;
+            flex-direction: row;
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+            justify-content: center;
+            /* justify-content: flex-end; */
+            /* justify-content: space-around; */
+            flex-wrap: wrap;
+            align-items: center;
+            /* align-content: center; */
+            align-content: flex-start;
+        }
+        #box1{
+            background-color: aqua;
+        }
+        #box2{
+            background-color: red;
+            height: 100px;
+        }
+        #box3{
+            background-color: brown;
+            height: 85px;
+        }
+        #box4{
+            background-color: green;
+        }
+        #box5{
+            background-color:darkblue;
+        }
+    </style>
+</head>
+<body>
+   <h1>FLEXBOX</h1> 
+   <div id="container">
+    <div id="box1">box1</div>
+    <div id="box2">box2</div>
+    <div id="box3">box3</div>
+    <div id="box4">box4</div>
+    <div id="box5">box5</div>
+   </div>
+</body>
+</html>

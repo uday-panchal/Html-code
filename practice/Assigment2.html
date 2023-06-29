@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu ul li {
+            float: left;
+            list-style-type: none;
+            background-color: rgb(223, 136, 88);
+            line-height: 30px;
+            color: white;
+            width: 300px;
+        }
+
+        .menu ul li:hover {
+            color: black;
+            background-color: rgb(176, 138, 138);
+        }
+
+        .menu ul li ul {
+            display: none;
+        }
+
+        .menu ul li:hover > ul {
+            display: block;
+        }
+
+        .menu ul li ul li {
+            display: inline;
+            position: relative;
+        }
+
+        .menu ul li ul li ul {
+            position: absolute;
+            left: 300px;
+            top: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li>sony
+                <ul>
+                    <li>television</li>
+                    <li>computer</li>
+                    <li>laptop</li>
+                </ul>
+            </li>
+            <li>Apple
+                <ul>
+                    <li>Headphone</li>
+                    <li>Ipead</li>
+                    <li>Bluthouth
+                        <ul>
+                            <li>23 inch</li>
+                            <li>32 inch</li>
+                            <li>43 inch</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>ouality
+                <ul>
+                    <li>best</li>
+                    <li>medium</li>
+                    <li>normal
+                        <ul>
+                     <li>56 inch</li>
+                     <li>34 inch</li>
+                     <li>23 inch</li>       
+                        </ul>
+                        </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
