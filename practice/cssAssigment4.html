@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: white;
+        }
+
+        .container {
+            height: 200vh;
+            /* width: 250vh; */
+            width: 100%;
+            background-size: contain;
+             background-repeat: no-repeat;
+            /* background: linear-gradient(rgba(0, 0,0.5)50%, rgba(0,0,0.5)50%); */
+            background-image:  url("https://th.bing.com/th/id/OIP.YY3s9E3R3M_GBIFGOtxHmgHaFj?w=204&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7");                                                                                                                                                                   
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            height: 80px;
+        }
+
+        .nav-logo {
+            color:orange;
+            margin-left: 40px;
+            font-size: 1.5rem;
+          }  
+          .nav-title {
+            color: orange;
+          }
+      
+
+         .nav-links a {
+            text-decoration: none;
+            color:white;
+            /* color: black; */
+            margin-left: 50px;
+        } 
+
+        .nav-links:hover {
+            color: rgb(242, 93 24);
+        }
+   .nav-links {
+    display: flex;
+    flex-grow: 1;
+    margin-left: 50px;
+}
+
+        .search-container {
+            margin-right: 150px;
+            display: flex;
+            width: 400px;
+            margin-left:40px ;
+        }
+
+        .nav-search {
+            height: 38px;
+            background-color: transparent;
+            width: 150px;
+            border: 1px solid rgba(242, 93, 24, 0.5);
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+            color: white;
+            padding-left: 14px;
+            padding-right: 10px;
+        }
+
+        .search-btn {
+            width: 100px;
+            background-color: rgba(242, 93, 24, );
+            border: 1px solid transparent;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            color:orange;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .nav-search:focus {
+            outline: none;
+        }
+
+        #guest {
+            margin-right: 20px;
+        }
+
+        .section-container {
+            color: white;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            margin-left: 40px;
+            position: relative;
+        }
+
+        .heading-white {
+            font-size: 3rem;
+        }
+
+        .heading-orange {
+            font-size: 3.5rem;
+            color: orange;
+        }
+
+        .description {
+            color: rgb(201, 201, 201);
+        }
+
+        .joinus-btn {
+            padding: 12px;
+            width: 100px;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            background-color:orange;
+            color:white;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+     
+
+        .login-container {
+            background-color: rgb(20, 20, 20);
+            border-radius: 6px;
+            height:500px;
+            width: 300px;
+            position: absolute;
+            right: 100px;
+             top: 0.1px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+
+        .loginhere-btn {
+            background-color: white;
+            border-radius: 6px;
+            color:orange;
+            font-size: 1.5rem;
+            width: 300px;
+            height: 48px;
+            letter-spacing: 2px;
+            margin-top: 20px;
+            
+            cursor: pointer;
+        }
+
+        .username {
+            width: 300px;
+            height: 44px;
+            margin-top: 60px;
+            
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(242, 93, 24, );
+            font-size: 1rem;
+            color: white;
+        }
+
+        .username:focus {
+            outline: none;
+        }
+
+        .loginbtn {
+            padding: 12px;
+            width: 200px;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            background-color:orange;
+            color:black;
+            font-size: 16px;
+            margin-top: 60px;
+        }
+
+        .bottomtext {
+            margin-top: 16px;
+        }
+
+        .span {
+            color: rgba(242, 93, 24, );
+            cursor: pointer;
+        }
+
+        .para-text2 {
+            font-size: 1rem;
+            margin-left: 8px;
+            text-align: center;
+        }
+      
+
+        .signup-text {
+            display: flex;
+            justify-content: center;
+            color: orange;
+        }
+     
+
+        .or {
+            margin-top: 13px;
+          
+        }
+        
+        .or-text {
+            color: rgb(201, 201, 201);
+        }
+
+        .para-text3 {
+            font-size: 1rem;
+            margin-left: 9px;
+            text-align:center;
+        }
+        .icons {
+            margin-top: 28px;
+           
+        }
+
+        .icons i {
+            margin-left: 30px;
+        }
+        .para2div {
+            display: flex;
+        } 
+    </style>
+    <script>
+        function printName() {
+            let name = document.getElementById("name");
+            let passward = document.getElementById("passward").value;
+            let guest = document.getElementById("guest");
+            guest.innerHTML = name.value;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navbar">
+                <div class="nav-logo">
+                    <h1 class="nav-title">PraRoz</h1>
+                </div>
+                <div class="nav-links">
+                    <a href="#">HOME</a>
+                    <a href="#">ABOUT</a>
+                    <a href="#">SERVICE</a>
+                    <a href="#">DESGIN</a>
+                    <a href="#">CONTACT</a>
+                </div>
+                <div class="search-container">
+                    <input type="search" class="nav-search" placeholder="search
+                    here">
+                    <input type="button" class="search-btn" value="search">
+                </div>
+                <div id="guest">
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="section-container">
+                <div>
+                    <h1 class="heading-white">Web Desgin & </h1>
+                    <h1 class="heading-orange">Development</h1>
+                    <h1 class="heading-white">Course</h1>
+                    <p class="description">Web Desgin is a specilization of the
+                        desgin stream.They also use HTML,<br>CSS, markus validators
+                        etc. to create desgin ekement. </p>
+                    <input type="button" class="joinus-btn" value="join us">
+                </div>
+                <div class="login-container">
+                    <input type="button" class="loginhere-btn" value="loginhere">
+                    <input type="text" class="username" id="name" placeholder="usernsme">
+                    <input type="password" class="username passward" id="passward" placeholder=" passward">
+                    <input type="button" value="login" class="loginbtn" onclick="printName()">
+                    <div class="bottomtext">
+                        <p>Don't have an account?</p>
+                        <div class="signup-text">
+                            <div class="para3div">
+                                <div class="para2div">
+                                    <span>Sing up?</span>
+                                    <p class="para-text2">here</p>
+                                </div>
+                                <h5 class="para-text3">log in with</h5>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="or">
+                        <p class="or-text">OR</p>
+                    </div>
+
+                    <div class="icons">
+                        <i class="fa-brands fa-facebook" style="color: #fafafa;"></i>
+                        <i class="fa-brands fa-instagram" style="color: #f5f5f5;"></i>
+                        <i class="fa-brands fa-twitter" style="color: #f3f4f7;"></i>
+                        <i class="fa-brands fa-google" style="color: #f3f4f7;"></i>
+                        <i class="fa-brands fa-skype" style="color: #fcfcfc;"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

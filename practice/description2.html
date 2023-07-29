@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+      function Register() {
+        let Id = 
+        document.getElementById("")
+      }  
+    </script>
+</head>
+<body>
+    <div>
+        <form>
+            <fieldset id="showregister">
+                <legend>Register Product</legend>
+                <dl>
+                    <dt>Product Id</dt>
+                   <dd><input type="number" min="1" max="10" id="txtId"></dd>
+                   <dt>Product Name </dt>
+                   <dd><input type="text" id="txtName"></dd>
+                   <dt>Product Price</dt>
+                   <dd><input type="range" min="1000" max="40000" id="txtPrice"></dd>
+                   <dt>Product Manufactured</dt>
+                   <dd><input type="date" id="txtMfd"></dd>
+                    <dt>Is in Stock</dt>
+                    <dd><input type="radio" name="Stock" value="Avalable" id="optYes">Yes
+                    <input type="radio" name="Stock" value="Out of Stock" id="optNo">No</dd>
+                    <dt>Shipped To</dt>
+                    <dd>
+                        <select  id="isCities">
+                            <option value="Delhi">Delhi</option>
+                            <option value="Mumbai">Mumbai</option>
+                  
+                    </select>
+                    </dd>
+                                  
+                </dl>
+                <br>
+                <input type="submit" value="Register" onclick="Register()">
+            </fieldset>
+            <br>
+                
+            <fieldset id="showdetails">
+                
+            </fieldset>
+
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        function Register() {
+            let Id =
+            document.getElementById("txtId").value;
+            // console.log(Id);
+            let Name =
+                document.getElementById("txtName").value;
+            // console.log(Name);
+
+            let Price =
+                document.getElementById("txtPrice").value;
+            let Mfd =
+                document.getElementById("txtMfd").value;
+            let Yes =
+                document.getElementById("optYes");
+            let No =
+                document.getElementById("optNo");
+            if (Yes.checked) {
+                Stock = Yes.value;
+            }
+            if (No.checked) {
+                Stock = No.value;
+            }
+            let City =
+                document.getElementById("isCities").value;
+            document.getElementById("lblId").innerText = Id
+            document.getElementById("lblName").innerHTML = Name
+            document.getElementById("lblPrice").innerHTML =Price
+            document.getElementById("lblMfd").innerHTML = Mfd
+            document.getElementById("lblStock").innerHTML = Stock
+            document.getElementById("lblCity").innerHTML = City
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <form>
+            <fieldset id="showregister">
+                <legend>Register Product</legend>
+                <dl>
+                    <dt>Product Id</dt>
+                    <dd><input type="number" min="1" max="10" id="txtId"></dd>
+                    <dt>Product Name</dt>
+                    <dd><input type="text" id="txtName"></dd>
+                    <dt>Product Price</dt>
+                    <dd><input type="range" min="1000" max="40000" id="txtPrice"></dd>
+                    <dt>Product Manufactured</dt>
+                    <dd><input type="date" id="txtMfd"></dd>
+                    <dt>Is in Stock</dt>
+                    <dd><input type="radio" name="Stock" value="Avalable" id="optYes">Yes
+                        <input type="radio" name="Stock" value="Out of Stock" id="optNo">No
+                    </dd>
+                    <dt>Shipped To</dt>
+                    <dd>
+                       
+                        <select id="isCities">
+                                <option value="Delhi">Delhi</option>
+                                <option value="Mumbai">Mumbai</option>
+                      
+                        </select>
+                    </dd>
+
+                </dl>
+                <br>
+                <input type="button" value="Register" onclick="Register()">
+            </fieldset>
+            <br>
+            <fieldset id="showDetails">
+                <legend>Product Details</legend>
+                <table width="400px" border="2px">
+                    <tr>
+                        <th>Product Id</th>
+                        <td id="lblId"></td>
+                    </tr>
+                    <tr>
+                        <th>Product Name</th>
+                        <td id="lblName"></td>
+                    </tr>
+                    <tr>
+                        <th>Product Price</th>
+                        <td id="lblPrice"></td>
+                    </tr>
+                    <tr>
+                        <th>Product Manufactured</th>
+                        <td id="lblMfd"></td>
+                    </tr>
+                    <tr>
+                        <th>Product of Stock?</th>
+                        <td id="lblStock"></td>
+                    </tr>
+                    <tr>
+                        <th>Shipped To</th>
+                        <td id="lblCity"></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
