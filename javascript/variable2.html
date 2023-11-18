@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- </head>
+<body> -->
+    <!-- <h2>for Loop</h2> -->
+
+    <!-- <p id="demo"></p> -->
+
+    </head>
+    <body onload="onDateCell()">
+        <div style="text-align: center;"></div>
+        <div id="currdate"></div>
+        <div>Hello</div>
+
+        <script>
+            // function forEachloop() {
+            //     let forEach = document.getElementById("forEach");
+            //     const person = ["a","b","35"];
+             
+            //   person.forEach(function(item) {
+            //     let text = "";
+            //   }  )
+                
+            //     forEach.innerHTML = text
+            // }
+            
+    
+            // function f1() {
+            //     let x = 2;
+            //     switch(x) {
+            //         case 0:
+            //             document.write("zero")
+            //             break;
+    
+            //         case 1:
+            //             document.write("one")
+            //             break;
+            //         case 2: 
+            //             document.write("two")
+            //             break;
+            //         default: 
+            //             document.write("default case")
+            //             break;
+            //     }
+            // }
+            // f1()
+    
+            // let text ="";
+            // for (let i=0; i<5; i++) {
+            //     text += i + "<br>";
+            // }
+            // document.getElementById("demo").innerHTML = text;
+    
+            // let result='';
+            // let i=0;
+            // do {
+            //     i= i+1;
+            //     result = result + i;
+            // }while (i<5);
+            // console.log(result)
+    
+
+
+            function onDateCell() {
+                let days =["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+                let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    
+                let currDate = new Date()
+                let weekday = currDate.getDay() - 1;
+                let day = currDate.getDate();
+                let month = currDate.getMonth();
+                let year = currDate.getFullYear();
+                let today = days[weekday] + " " + day + " " + months[month] + " " + year;
+                let mydate = document.getElementById("currdate");
+                mydate.innerHTML = today;
+
+            }
+        </script>
+    </body>
+
+</html>

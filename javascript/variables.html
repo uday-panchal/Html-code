@@ -7,6 +7,7 @@
     
 </head>
 <body>
+    <p id="demo"></p>
     <script>
         // var myName ="john"
         // var myName;
@@ -78,10 +79,25 @@
         // let c=parseInt(a) + parseFloat(b);
         // console.log("c" , c)
 
-        var Name ="uday"
-        var number =10;
-        var role ="harsh"
-        console.log(number)
+        // var Name ="uday"
+        // var number =10;
+        // var role ="harsh"
+        // console.log(number)
+
+        // function typeofcheck () {
+        //     let a = "this is a string";
+        //     let b = 10;
+        //     document.write("type of a;",typeof a)
+        //     document.write("<br>type of a;",typeof b)
+        // }
+        // typeofcheck()
+
+        let text ="";
+        for(let i=0;i<5; i++) {
+            text +="<br>the number is"+ i;
+            i++;
+        }
+        document.getElementById("demo").innerHTML=text;
     </script>
 </body>
 </html>

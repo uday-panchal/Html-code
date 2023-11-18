@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function selectharddisk() {
+            let ssthdd = document.getElementById("ssthdd");
+            let txtRAM = document.getElementById("txtRAM");
+            let astgraphic = document.getElementById("astgraphic");
+            if (parseInt(ssthdd.value) > 5) {
+                txtRAM.disabled = false;
+                ssthdd.disabled = true;
+            }
+        }
+        function selectRAM() {
+            let txtRAM = document.getElementById("txtRAM");
+            let astgraphic = document.getElementById("astgraphic");
+            if (txtRAM.value > 4) {
+                astgraphic.disabled = false;
+                txtRAM.disabled = true;
+            }
+        }
+        function selectgraphic() {
+            let astgraphic = document.getElementById("astgraphic");
+            let btnInstall = document.getElementById("btnInstall");
+            if (astgraphic.value == "yes") {
+                btnInstall.disabled = false;
+                astgraphic.disabled = true;
+            }
+        }
+        function install() {
+            document.write("Game installed succusfully");
+        }
+    </script>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Install Game</legend>
+        <dl>
+            <dt>select avaliable hard disk space</dt>
+            <dd>
+                <select id="ssthdd" onchange="selectharddisk()">
+                    <option value="2">2GB</option>
+                    <option value="5">5GB</option>
+                    <option value="10">10GB</option>
+                </select>
+            </dd>
+            <dt>select avaliable RAM</dt>
+            <dd>
+                <input type="number" id="txtRAM" min="1" max="8" value="1" disabled onchange="selectRAM()">
+            </dd>
+            <dt>Is graphic card avaliable</dt>
+            <dd><select id="astgraphic" disabled onchange="selectgraphic()">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </dd>
+            <br>
+            <input type="button" value="Install" id="btnInstall" disabled onclick="install()">
+        </dl>
+    </fieldset>
+</body>
+
+</html>

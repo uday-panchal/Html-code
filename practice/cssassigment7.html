@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 80vh;
+            width: 36.8%;
+            background-image: url("../assets/assigment7/Hero\ Image.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-top: 80px;
+            margin-left: 10rem;
+        }
+
+        .section {
+            position: absolute;
+            margin-top: -5rem;
+            margin-left: -7rem;
+        }
+
+        .section2 {
+            position: absolute;
+            justify-content: flex-end;
+            margin-left: 60rem;
+            margin-top: -3rem;
+        }
+
+        .str-btn {
+            background-color: green;
+            justify-content: center;
+            height: 30px;
+            width: 120px;
+            color: white;
+            margin-left: 29rem;
+            margin-top: 5rem;
+            border: none;
+        }
+
+        .contract {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .heading {
+            position: absolute;
+            margin-left: 49rem;
+            margin-top: 9rem;
+            width: 16rem;
+            font-size: 2.5rem;
+        }
+
+        .description {
+            position: absolute;
+            margin-left: 57rem;
+            margin-top: 18rem;
+            width: 24rem;
+            font-size: 12px;
+        }
+
+        .explore-btn {
+            background-color: darksalmon;
+            color: white;
+            height: 35px;
+            width: 120px;
+            border: none;
+            margin-top: 12rem;
+            margin-left: 29rem;
+        }
+
+        .section3 {
+            position: absolute;
+            justify-content: center;
+        }
+
+        .box3 {
+            margin-top: 8rem;
+            margin-left: 5rem;
+        }
+
+        .contract1 {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .heading1 {
+            position: absolute;
+            margin-top: 9rem;
+            font-weight: bold;
+            margin-left: 11rem;
+        }
+
+        .description1 {
+            position: absolute;
+            margin-top: 10rem;
+            margin-left: 11rem;
+            width: 7rem;
+            font-size: 10px;
+        }
+
+        .section4 {
+            position: absolute;
+            justify-content: flex-end;
+        }
+
+        .box6 {
+            margin-left: 20rem;
+            margin-top: 8rem;
+        }
+
+        .content2 {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .heading2 {
+            position: absolute;
+            margin-top: -3.6rem;
+            margin-left: 47rem;
+            width: 20rem;
+            font-weight: bold;
+        }
+
+        .description2 {
+            position: absolute;
+            margin-top: -2.5rem;
+            margin-left: 34rem;
+            width: 7rem;
+            font-size: 10px;
+        }
+
+        .section5 {
+            position: absolute;
+            justify-content: center;
+        }
+
+        .box5 {
+            /* position: absolute; */
+            margin-left: 35rem;
+            margin-top: -4.4rem;
+        }
+
+        .content3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .heading3 {
+            position: absolute;
+            margin-top: -7.4rem;
+            margin-left: 52rem;
+            width: 10rem;
+        }
+
+        .description3 {
+            position: absolute;
+            margin-left: 49rem;
+            width: 7rem;
+            margin-top: -5rem;
+            font-size: 10px;
+        }
+        .menu-btn {
+            position: absolute;
+            background-color: green;
+            color: white;
+            height: 30px;
+            width: 110px;
+            margin-left: 34rem;
+            margin-top: 11rem;
+        }
+
+        .menu {
+            position: absolute;
+
+        }
+
+        .heading4 {
+            margin-top: 15rem;
+            margin-left: 29rem;
+            width: 19rem;
+            font-size: 2rem;
+        }
+        .sectiom{
+            background-color: white;
+            height: 200vh;
+            width: 100%;
+
+        }
+        .upper-container{
+            display: grid;
+            height: 100vh;
+            /* align-items:flex-start; */
+            margin-top: -35rem;
+            margin-left: 10rem;
+            margin-right: 10rem;
+            /* margin-bottom: 10rem; */
+            /* grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr; */
+            grid-template-areas:   
+            "food food breakfast crispy"
+            "food food breakfast dinner"
+            "sweet ffsweet lunch dinner";
+            /* gap: 0.4rem; */
+            gap: 10px;
+        }
+        .food{
+            grid-area: food;
+        }
+        .breakfast{
+            grid-area: breakfast;
+        }
+        .crispy{
+            grid-area: crispy;
+        }
+        .sweet{
+            grid-area: sweet;
+        }
+        .ffsweet{
+            grid-area: ffsweet;
+        }
+        .lunch{
+            grid-area: lunch;
+        }
+        .dinner{
+            grid-area: dinner;
+        }
+        .foot-panel1{
+            /* position: absolute; */
+            display: flex;
+            background-color: pink;
+            margin-top: 29rem;
+            justify-content:space-evenly;
+            align-items: center;
+            height: 300px;
+            width: 100%;
+
+        }
+        .foot-panel1 a {
+            color: black;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .foot-panel1 p {
+            color: black;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .foot-panel ul {
+            list-style-type: none;
+        }
+        .foot-panel ul li:hover>a {
+            text-decoration: underline;
+        }
+       
+       
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="section">
+            <div class="box1 box">
+                <img src="../assets/assigment7/Logo.png" height="80px" width="200px" alt="">
+            </div>
+            <div class="section2">
+                <div class="box2 box">
+                    <img src="../assets/assigment7/codicon_three-bars.png" height="19px" width="20" alt="">
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="button_container">
+                <button type="submit" class="str-btn">50% of all product</button>
+            </div>
+
+            <div class="contract">
+                <h1 class="heading">Enjoy Your Delicious Food</h1>
+                <p class="description">Quisque velit nisi,pretium ut lacinia in elementum id enim mauris
+                    biandit aliquet alit,edgt tincidut nibh pulvinar a.
+                </p>
+            </div>
+            <div class="button_container1">
+                <button type="submit" class="explore-btn">Explore Now</button>
+            </div>
+            <div class="section3">
+                <div class="box3">
+                    <img src="../assets/assigment7/icons8-summer-sales-48 1.png" height="70px" width="80px" alt="">
+                </div>
+            </div>
+            <div class="contrect1">
+                <h4 class="heading1">Disconect Voucher</h4>
+                <p class="description1">Quicque velit nisi,pretium ut lacina of fast</p>
+            </div>
+            <dv class="section4">
+                <div class="box6">
+                    <img src="../assets/assigment7/icons8-fruits-and-vegetables-64 1.png" height="70px" width="80px"
+                        alt="">
+                </div>
+                <div class="content2">
+                    <h4 class="heading2">Fresh Healthy Food</h4>
+                    <p class="description2">Quicque velit nisi,pretium ut lacina of fast</p>
+                </div>
+                <div class="section5">
+                    <div class="box5">
+                        <img src="../assets/assigment7/icons8-delivery-64 1.png" height="70px" width="80px" alt="">
+                    </div>
+                    <div class="content3">
+                        <h4 class="heading3">Fast Home Delivery</h4>
+                        <p class="description3">Quicque velit nisi,pretium ut lacina of fast</p>
+                    </div>
+                </div>
+    </div>
+    <div class="sectiom">
+    <div class="button_container0">
+        <button type="submit" class="menu-btn">Our Menu</button>
+    </div>
+    <div class="menu">
+        <h2 class="heading4">Explore Our Menu</h2>
+    </div>
+    </div>
+    <div class="upper-container">
+        <div class="food">
+            <img src="../assets/assigment7/box1.png" class="" width="100%" height="100%" alt="">
+        </div>
+        <div class="breakfast">
+            <img src="../assets/assigment7/box2.png" class="" width="100%" height="100%" alt="">
+        </div>
+        <div class="crispy">
+            <img src="../assets/assigment7/box3.png" class="" width="100%" height="100%" alt="">
+        </div>
+        <div class="sweet">
+            <img src="../assets/assigment7/box4.png" class="" width="100%" height="100%" alt="">
+        </div>
+        <div class="ffsweet">
+            <img src="../assets/assigment7/box5.png" class="" width="100%" height="100%" alt="">
+        </div>
+        <div class="lunch">
+            <img src="../assets/assigment7/box6.png" class="" width="100%" height="100%" alt="">
+        </div>
+        <div class="dinner">
+            <img src="../assets/assigment7/box7.png" class="" width="100%" height="100%" alt="">
+        </div>
+    </div>
+
+    </section>
+<footer>
+    <div class="foot-panel1">    
+             <img src="../assets/assigment7/Logo.png" height="80px" width="100px" alt="">
+        
+            <div>
+            <ul>
+                <li>
+                    <p>Main links</p>
+                </li>
+                <li><a href="#">Order tracking</a></li>
+                <li><a href="#">New Order</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Newa & Blogs</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <p>Support</p>
+                </li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & condition</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <p>Join our Newsletter</p>
+                </li>
+                <li><a href="#"><input type="email" id="email" class="email-address" placeholder="Enter Your Email Address"></a></li>
+                <li><a href="#">Follow Us</a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook-f" style="color: #1c1c1c;"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter" style="color: #0c0d0d;"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram" style="color: #19191a;"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube" style="color: #1a1a1a;"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

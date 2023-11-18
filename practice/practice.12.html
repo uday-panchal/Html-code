@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function oneloginpress() {
+        let text = document.getElementById("text");
+        let passwordtext = document.getElementById("passwordtext");
+        let message = document.getElementById("message");
+        let nametext = {username:"harsh", password:"harsh123"};
+        if(text.value != nametext.username || passwordtext.value != nametext.password) {
+        message.innerHTML ="invalid username or password"
+        }
+        else {
+            message.innerHTML ="logim succsesfully"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div>
+        <fieldset>
+            <legend>login</legend>
+            <dl>
+                <dt>username</dt>
+                <dd><input type="text" id="text"></dd>
+            </dl>
+            <dl>
+                <dt>passward</dt>
+                <dd><input type="password" id="passwordtext"></dd>
+            </dl>
+            <input type="button" value="login" onclick="oneloginpress()"/>
+        </fieldset>
+    </div>
+    <div id="message"></div>
+</body>
+</html>

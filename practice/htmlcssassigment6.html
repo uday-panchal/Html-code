@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .container {
+            background-image: url("../assets/images/assigment6/Frame\ 1.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 200vh;
+            width: 100%;
+        }
+
+        .navbar {
+            /* display: flex; */
+            align-items: center;
+            justify-content: flex-end;
+            height: 80px;
+            position: absolute;
+        }
+
+        .nav-logo {
+            color: rgb(244, 241, 241);
+            margin-left: 40px;
+            font-size: 1.3rem;
+        }
+
+        .nav-title {
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            margin-left: 700px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            margin-left: 30px;
+            font-size: 1.1rem;
+        }
+
+        .section-container {
+            color: rgb(234, 234, 240);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+        }
+
+        .description {
+            display: flex;
+            color: white;
+            /* position: absolute; */
+            height: 40px;
+            width: 10%0px;
+            margin-top: 20rem;
+            margin-left: 20px;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .heading {
+            color: white;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15rem;
+            font-size: 1.9rem;
+            position: absolute;
+        }
+
+        .search-container {
+            height: 150vh;
+            width: 100%;
+            background-image: url(data:image/jpeg;base64,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);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            margin-top: -20rem;
+        }
+
+        .heading1 {
+            height: 20px;
+            margin-top: 20px;
+            justify-content: center;
+            margin-left: 30rem;
+        }
+
+        .description1 {
+            height: 10px;
+            width: 40rem;
+            justify-content: center;
+            margin-top: 7rem;
+            margin-left: -20rem;
+            color: white;
+        }
+
+        .song-section {
+            color: #f1f2f4;
+        }
+
+        .song {
+            display: flex;
+            color: rgb(255, 252, 252);
+            margin-left: 26rem;
+            margin-bottom: 15rem;
+        }
+
+        .button_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .start_btn {
+            background-color: red;
+            height: 30px;
+            width: 150px;
+            color: white;
+            outline: none;
+            border: none;
+            margin-top: -65rem;
+            border-radius: 20px;
+        }
+
+        .search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .heading2 {
+            margin-top: -59rem;
+            font-size: 10px;
+        }
+
+        .section1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* position: absolute; */
+        }
+
+        .box {
+            position: absolute;
+            margin-left: 40px;
+            margin-bottom: 20rem;
+        }
+
+        .contrect {
+            height: 200vh;
+            width: 100%;
+            background-image: url(https://cdn.wallpapersafari.com/17/43/ypvM31.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+        }
+
+        .heading3 {
+            color: black;
+            font-size: 20px;
+            align-items: center;
+            display: flex;
+            margin-left: 20rem;
+            margin-bottom: 50rem;
+        }
+
+        .description2 {
+            color: black;
+            font-size: 13px;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: -52rem;
+            display: flex;
+        }
+
+        .button_container1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .read_btn {
+            background-color: blue;
+            color: white;
+            height: 25px;
+            width: 100px;
+            border: none;
+        }
+
+        .section2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 18rem;
+            margin-left: 10rem;
+        }
+
+        .box1 {
+            position: absolute;
+            /* margin-top: 10rem; */
+        }
+
+        .Contact3 {
+            height: 150vh;
+            width: 100%;
+            background-image: url("../assets/images/assigment6/concert.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            margin-top: 20rem;
+        }
+
+        .heading4 {
+            margin-top: 10rem;
+            margin-left: 24rem;
+            font-size: 14px;
+            color: white;
+        }
+
+        .paragraph {
+            display: flex;
+            color: black;
+            justify-content: center;
+            align-items: center;
+            margin-top: -33rem;
+        }
+
+        .content {
+            height: 150vh;
+            width: 100%;
+            background-image: url(https://wallpapercave.com/wp/wp3049592.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            margin-top: 30rem;
+        }
+
+        .section3 {
+            align-items: center;
+            margin-top: -39rem;
+        }
+
+        .box2 {
+            position: absolute;
+        }
+
+        .heading0 {
+            margin-top: 10rem;
+            margin-left: 20rem;
+            font-size: 18;
+            width: 70rem;
+        }
+
+        .paragraph1 {
+            display: flex;
+            color: black;
+            position: absolute;
+            margin-top: 13rem;
+            margin-right: 1rem;
+            margin-left: 20rem;
+            font-size: 17px;
+        }
+
+        .rec_btn {
+            background-color: blue;
+            color: white;
+            height: 40px;
+            width: 150px;
+            border: none;
+            outline: none;
+            margin-left: 30rem;
+            margin-top: 12rem;
+        }
+        .foot-panel{
+            display: flex;
+            margin-top: 5rem;
+            background-color: #232f3e;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 400px;
+        }
+        .foot-panel a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .foot-panel p {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .foot-panel ul {
+            list-style-type: none;
+        }
+        .foot-panel ul li:hover>a {
+            text-decoration: underline;
+        }
+        .copyright{
+            text-align: center;
+            /* margin-top: -2rem; */
+            color: white;
+            background-color:darkblue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navbar">
+                <div class="nav-logo">
+                    <h3 class="nav-title">myTune</h3>
+                </div>
+                <div class="nav-links">
+                    <a href="">overview</a>
+                    <a href="">vedio</a>
+                    <a href="">Music</a>
+                    <a href="">Gift cards</a>
+                </div>
+                <div class="section-container">
+                    <h1 class="heading">myTune</h1>
+                    <p class="description">yours music ,movies, and TV show take center syage.
+
+                        myTune is the best way to organize and enjoy the music, movie,and TV show you already have- and
+                        shop for the ones you wants. Enjoy all the entertianment muTunes has to offer on you Mac and PC.
+                    </p>
+                </div>
+            </div>
+    </div>
+    </header>
+    <section>
+
+        <div class="song-section">
+            <h4 class="song">45 million song.zero ads.</h4>
+        </div>
+
+        <div class="search-container">
+            <div class="heading1">
+                <i class="fa-sharp fa-solid fa-music" style="color: #f1f2f4;">Music</i>
+            </div>
+            <p class="description1">stream over 45 million ,ads free.or download albums and tacsks
+                myTune is the best way to organize and enjoy the music, movie,and TV show you already have- and
+                shop for the ones you wants. Enjoy all the entertianment muTunes has to offer on you Mac and PC.
+                month trail with no communities,and cancel anytime. </p>
+        </div>
+        <div class="button_container">
+            <button type="submit" class="start_btn">start your trail now</button>
+        </div>
+        <div class="search">
+            <p class="heading2">orange music is avaliable in myTunes and for ios and androied devics</p>
+        </div>
+
+        <div class="section1">
+            <div class="box box1">
+                <img src="../assets/images/assigment6/ipadplusphone.png" height="500vh" width="90%" alt="">
+            </div>
+        </div>
+        <div class="contrect">
+            <h2 class="heading3">the movie and TV collection you always wished for.Granted</h2>
+        </div>
+        <div class="contrect1">
+            <p class="description2">With over 100,000 movies and TV show to choose from theirs always something great to
+                watch on myTune if you watch on
+                orange TV 4k you will be able to enjoy a trembers selection of yours favoire content in 4k HDR so get
+                ready to enjoy episode of
+                your favorite TV show or hit movies you have been watching to see anytime just tap to play or even
+                download if yo are
+                gong somehere you won't have WiFi.
+            </p>
+        </div>
+        <div class="button_container1">
+            <button type="submit" class="read_btn">Read More</button>
+        </div>
+        <div class="section2">
+            <div class="box1 box2">
+                <img src="../assets/images/assigment6/MacBook_pro.png" height="500vh" width="80%" alt="">
+            </div>
+        </div>
+        <div class="Contact3">
+            <h2 class="heading4">the movie and TV collection you always wished for.Granted</h2>
+        </div>
+        <div class="paragraph">
+            <p class="description3"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, suscipit. Rerum
+                ducimus a quod, ut et Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, suscipit. Rerum
+                ducimus a quod, ut et voluptas obcaecati unde USvoluptas obcaecati unde US</p>
+        </div>
+        <div class="content">
+            <h2 class="heading0">Gift Card</h2>
+            <p class="paragraph1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, suscipit. Rerum
+                ducimus a quod, ut et Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, suscipit. Rerum
+                ducimus a quod, ut et voluptas obcaecati unde USvoluptas obcaecati unde U</p>
+        </div>
+        <div class="section3">
+            <div class="box2 box">
+                <img src="../assets/images/assigment6/card.png" height="200vh" width="60%" alt="">
+            </div>
+            <div class="button_container0">
+                <button type="submit" class="rec_btn">Recent</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="foot-panel">
+            <ul>
+                <li>
+                    <p>Shop & Learn</p>
+                </li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Shows</a></li>
+                <li><a href="#">Apps</a></li> 
+                <li><a href="#">Gift Card</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <p>Orange Store</p>
+                </li>
+                <li><a href="#">Find a store</a></li>
+                <li><a href="#">Today at Orange</a></li>
+                <li><a href="#">Orange Camo</a></li>
+                <li><a href="#">findlast</a></li>
+                <li><a href="#">Orange Status</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <p>Education & Business</p>
+                </li>
+                <li><a href="#">Order Education</a></li>
+                <li><a href="#">Science Education</a></li>
+                <li><a href="#">Job and Role</a></li>
+                <li><a href="#">Shop for Buisness</a></li>
+                <li><a href="#">Join Now</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <p>About Orange</p>
+                </li>
+                <li><a href="#">Mansoon</a></li>
+                <li><a href="#">Orange Landship</a></li>
+                <li><a href="#">Events Orange</a></li>
+                <li><a href="#">Contract Orange</a></li>
+                <li><a href="#">Orange Color</a></li>
+            </ul>
+        </div>
+        <div class="copyright">Copyright 2022 Do some coading</div>
+    </footer>
+</body>
+
+</html>

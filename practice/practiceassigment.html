@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showsubmit() {
+            let txtName = document.getElementById("txtName").value;
+            let numbername = document.getElementById("numbername").value;
+            let btnsubmit = document.getElementById("btnsubmit");
+            let message = document.getElementById("message");
+            let userDetails = {userName:"john",PIN:"231", OTP:"213456" };
+            if(userDetails.userName == txtName) {
+                if(userDetails.PIN == numbername) {
+                 message.innerHTML ="PIN Verified"   
+                }
+               else if(userDetails.OTP == numbername) {
+                    message.innerHTML ="OTP Verified"
+                }
+                else {
+                    message.innerHTML = "Invalid PIN/OTP"
+              }
+            }
+            else {
+                message.innerHTML ="Invalid Username"
+            }
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Payment</legend>
+        <dl>
+            <dt>card name</dt>
+            <dd><input type="text" id="txtName">
+            </dd>
+            <dt>PIN/OTP</dt>
+            <dd><input type="number" id="numbername">
+            </dd>
+        </dl>
+        <br>
+        <input type="button" value="submit" id="btnsubmit" onclick="showsubmit()"/>
+
+    </fieldset>
+    <div id="message"></div>
+</body>
+</html>

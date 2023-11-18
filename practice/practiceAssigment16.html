@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            height: 15vh;
+            background-color: rgb(1, 171, 1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav_title {
+
+            color: white;
+            margin-left: 4rem;
+        }
+
+        .search_input {
+            height: 2rem;
+            width: 14rem;
+            outline: none;
+            border: none;
+            border-radius: 2px;
+            padding-left: 13px;
+            margin-right: 22rem;
+        }
+
+        .box_container {
+            width: 70%;
+            font-weight: bold;
+            border: 1px solid lightgray;
+            margin: 50px;
+        }
+
+        .box_inner {
+            margin: 16px;
+        }
+
+        #inputbox {
+            height: 2rem;
+            width: 15rem;
+            outline: none;
+            border: 1px solid lightgray;
+            border-radius: 2px;
+            margin-top: 20px;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+        #submit_btn{
+            height: 2rem;
+            width: 6rem;
+            border: none;
+            outline: none;
+            background-color: black;
+            color: white;
+            border-radius: 2px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #list_container{
+            list-style-type: none;
+        }
+        #list_container li {
+            padding: 1rem;
+            font-size: 18px;
+        }
+        .line{
+            border: 1px solid lightgray;
+            display: flex;
+            justify-content: space-between;
+        }
+        .item_text{
+            margin-top: 20px;
+        }
+        .btn_danger{
+            background-color: red;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border: none;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navlogo">
+                <h1 class="nav_title">Item Lister</h1>
+            </div>
+            <div class="search_bar">
+                <input type="search" class="search_input" id="filter" placeholder="Search Items">
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="box_container">
+            <div class="box_inner">
+                <h1>Add Items</h1>
+                <input type="text" value="inputbox" id="inputbox">
+                <input type="button" value="submit" id="submit_btn">
+                <h1 class="item_text">Items</h1>
+                <ul id="list_container">
+                    <li class="line" id="list">item 1 <button class="btn_danger delete">X</button> </li>
+                    <li class="line" id="list">item 2 <button class="btn_danger delete">X</button> </li>
+                    <li class="line" id="list">item 3 <button class="btn_danger delete">X</button> </li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src="../javascript/assigment16.js"></script>
+</body>
+</html>
