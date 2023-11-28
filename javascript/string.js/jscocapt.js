@@ -71,12 +71,12 @@ const odd = (element) => element %2 !=0;
 console.log(array4.some(odd));
 
 
-// const animales = ['ant', 'bison', 'camel', 'duck', 'elephant'];
-// console.log(animales.slice(2));
-// console.log(animales.slice(2,4))
-// console.log(animales.slice(1,5))
-// console.log(animales.slice(-2))
-// console.log(animales.slice(2,-1))
+const animales = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+console.log(animales.slice(2));
+console.log(animales.slice(2,4))
+console.log(animales.slice(1,5))
+console.log(animales.slice(-2))
+console.log(animales.slice(2,-1))
 
 
 
@@ -267,10 +267,10 @@ x();
 // first()
 
 
-// const numberone = [1,2,3];
-// const numbertwo = [4,5,6];
-// const numbercombined = [...numberone, ...numbertwo];
-// console.log(numbercombined);
+const numberone = [1,2,3];
+const numbertwo = [4,5,6];
+const numbercombined = [...numberone, ...numbertwo];
+console.log(numbercombined);
 
 
 // var names = ["a","b","c","d"];

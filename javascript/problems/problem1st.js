@@ -168,3 +168,39 @@ console.log(capitalWord("this is the basic string"))
 const woreds = ['spray','limit','contact','examination','presant'];
 console.result = woreds.filter((word) => word.length > 6);
 console.log(result)
+
+// 21. write a js program to js function even number 
+const arr3 = [1,2,3,4,5,6,7,8]
+const even = (element) =>  element %2 ===0;
+console.log(arr3.some(even))
+
+// 22. write a js program to js function added month in array
+const month = ['jan','march','april','may','july'];
+month.splice (1,0,'feb')
+console.log(month)
+
+month.splice (5,0, 'june')
+console.log(month)
+
+// 23. write a js function to js program 
+const element = ['fire','Air','Water']
+console.log(element.join())
+console.log(element.join("-"))
+console.log(element.join("."))
+console.log(element.join(" "))
+
+// 24. write a js program to ood number select and 
+const aray1 = [1,2,3,4,5,6,7,8,9]
+const odd = (element) => element %2 != 0;
+console.log(aray1.filter(odd))
+
+const animals = ['ant','bision','cmael','duck','elephent'];
+console.log(animals.slice(2));
+console.log(animals.slice(1,5))
+console.log(animals.slice(2,-1))
+
+// 25. write aj s program to combined te teo numbers 
+const numberOne = [1,'harsh',3];
+const numberTwo = [4,'panchal',6]
+const numberCombined = [...numberOne,...numberTwo]
+console.log(numberCombined)
